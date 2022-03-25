@@ -364,7 +364,7 @@ header nav.nav li a {
 .hero {
 	user-select: none;
 	height: calc(100vh - 111px);
-	background-image: url(../hero.webp);
+	background-image: url(../image/hero.webp);
 	background-size: cover;
 	max-width: 100%;
 	background-position: center;
@@ -425,17 +425,6 @@ header nav.nav li a {
 /* *************** */
 /* ** Projectss ** */
 /* *************** */
-<<<<<<< HEAD
-<<<<<<< HEAD
-.Projects {
-=======
-.Projects{
->>>>>>> 336ffc92c81cf9cc30fb89199c994b919d394eb7
-=======
-.Projects{
->>>>>>> 336ffc92c81cf9cc30fb89199c994b919d394eb7
-	overflow: hidden;
-}
 .Projects .content .card {
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.153);
 	border-radius: 10px;
