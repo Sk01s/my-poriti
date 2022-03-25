@@ -357,7 +357,7 @@ header nav.nav li a {
 .hero {
 	user-select: none;
 	height: calc(100vh - 111px);
-	background-image: url(../image/hero.jpg);
+	background-image: url(../hero.webp);
 	background-size: cover;
 	max-width: 100%;
 	background-position: center;
