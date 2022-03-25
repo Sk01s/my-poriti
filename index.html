@@ -21,7 +21,7 @@
 					<li><a data-name="About" class="swt-an" href="#About">About</a></li>
 					<li><a data-name="Projects" class="swt-an" href="#Projects">Projects</a></li>
 					<li>
-						<a data-name="Hire Me" class="active swt-an" href="#Hire-Me">Hire Me</a>
+						<a data-name="Hire Me" class="active swt-an" href="#Hire-me">Hire Me</a>
 					</li>
 				</ul>
 			</nav>
@@ -127,8 +127,46 @@
 		</article>
 		<!-- End About -->
 		<!-- Start Hire  -->
-		<section class="Hire-me" id="Hirm-Me">
-			<form action="" method="get"></form>
+		<section class="Hire-me" id="Hirm-me">
+			<h2 class="new-section-text text flex al-ce ju-ce">Hire Me</h2>
+			<form
+				action="https://formspree.io/f/mnqwbnnr"
+				method="post"
+				class="flex flex-di-cl ju-ce al-ce"
+				data-form
+			>
+				<div class="number flex al-ce">
+					<label for="number">Phone number</label>
+					<input type="number" name="number" placeholder="(123) 456-7891" id="pass" />
+				</div>
+				<div class="name flex al-ce">
+					<label for="name">Name</label>
+					<input
+						type="text"
+						class="name"
+						name="name"
+						required
+						placeholder="Lana"
+						id="name"
+					/>
+				</div>
+				<div class="email flex al-ce">
+					<label for="email">Email</label>
+					<input
+						type="email"
+						name="email"
+						id="email"
+						required
+						placeholder="example@outlook.com"
+					/>
+				</div>
+				<div class="desciption flex al-ce">
+					<label for="desc">Your offer</label>
+					<textarea name="desciption" placeholder="desciption" id="desc"></textarea>
+				</div>
+				<p data-messege-form class="result flex ju-ce al-ce">succes</p>
+				<button type="submit" class="hover-button">send</button>
+			</form>
 		</section>
 		<!-- End Hire  -->
 	</body>
