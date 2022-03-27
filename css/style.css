@@ -179,12 +179,14 @@ select {
 	font-size: var(--fn-size-400);
 	border: solid 1px var(--cl-main);
 	border-radius: 10px;
-	padding: 12px 23px;
+	padding: 13px 20px;
 	color: var(--cl-main);
 	font-weight: var(--fn-wei-700);
 	margin-inline: auto;
 	min-height: 50px;
 	max-width: fit-content;
+	margin-top: 2em;
+	background-color: transparent;
 }
 .hover-button::after {
 	content: "";
@@ -659,20 +661,45 @@ header nav.nav li a {
 	background-color: #3c3c3c;
 	padding: 50px 0;
 	position: relative;
+	border-radius: 50% 0 0 0;
 }
 .footer::after {
 	position: absolute;
 	content: "";
 	width: 50%;
-	height: 40px;
+	height: 80px;
 	background-color: inherit;
-	right: 50%;
+	left: 50%;
+	top: -80px;
+	border-radius: 100% 0 0;
 }
 .footer .footer-hire a {
 	color: var(--cl-accent2);
 	padding: 0.8em;
 	border-radius: 10px;
 	border: solid 3px var(--cl-accent2);
+	border-right: none;
+	border-left: none;
+}
+.footer .footer-secetion {
+	position: relative;
+}
+.footer .footer-secetion::after,
+footer .footer-secetion::before {
+	content: "";
+	position: absolute;
+	width: 2px;
+	background-color: var(--cl-accent2);
+	border-radius: 20px;
+}
+.footer .footer-secetion::after {
+	top: 45px;
+	height: calc(100% - 90px);
+}
+.footer .footer-secetion::before {
+	top: 0;
+	right: -20px;
+	height: 100%;
 }
 .footer .footer-secetion li {
 	list-style: none;
@@ -683,6 +710,7 @@ header nav.nav li a {
 }
 .footer .footer-social svg,
 .footer .footer-social img {
+	margin-top: 1rem;
 	color: var(--cl-accent2);
 	display: block;
 	width: 40px;
