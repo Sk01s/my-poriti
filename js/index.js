@@ -40,7 +40,6 @@ window.addEventListener("DOMContentLoaded", function () {
 
 	var form = document.querySelector("[data-form]");
 	var status = document.querySelector("[data-messege-form]");
-	console.log(status);
 
 	// Success and Error functions for after the form is submitted
 
