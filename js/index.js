@@ -1,12 +1,18 @@
 const progerssSkills = document.querySelectorAll("[data-state]");
+
 const aboutSecetion = document.querySelector("#About");
+
 let aboutObsSection = new IntersectionObserver((el) => {
 	if (el[0].isIntersecting) {
 		progerssSkills.forEach((el) => {
-			let prog = 0;
+			let progress = 0;
+
 			const skillProg = setInterval(() => {
-				el.style.width = `${prog++}%`;
-				if (`${prog}%` == el.dataset.state) {
+				//Every .2 seconds is going to add one perscent to the width of skill bar
+				el.style.width = `${progress++}%`;
+				//if the  number is equal to the number that in element (atterbute)
+				if (`${progress}%` == el.dataset.state) {
+					// stop the timer fomr contineu
 					clearInterval(skillProg);
 				}
 			}, 200 / el.dataset.state);
@@ -22,6 +28,7 @@ const animationElem = document.querySelectorAll("[data-onscroll]");
 const onscrollAnimationObs = new IntersectionObserver(
 	(e) => {
 		[...e[0].target.children[1].children].forEach((el) => {
+			// when the parent element is not visible is going to  add the class
 			if (!e[0].isIntersecting) {
 				el.classList.add(el.dataset.onscroll);
 			}
@@ -79,3 +86,11 @@ function ajax(method, url, data, success, error) {
 	};
 	xhr.send(data);
 }
+//  fuction to correct the #hash in the link when wright in input
+function removeHash() {
+	location.hash = "#Hire-me";
+}
+const inputs = document.querySelectorAll("input, textarea");
+inputs.forEach((input) => {
+	input.addEventListener("focusin", removeHash);
+});

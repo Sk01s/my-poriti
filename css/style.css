@@ -175,17 +175,16 @@ select {
 .hover-button {
 	position: relative;
 	z-index: 1;
-	overflow: hidden;
 	transition: var(--time-tra);
 	font-size: var(--fn-size-400);
-	background-color: transparent;
 	border: solid 1px var(--cl-main);
 	border-radius: 10px;
 	padding: 12px 23px;
 	color: var(--cl-main);
 	font-weight: var(--fn-wei-700);
 	margin-inline: auto;
-	width: fit-content;
+	min-height: 50px;
+	max-width: fit-content;
 }
 .hover-button::after {
 	content: "";
@@ -227,18 +226,15 @@ select {
 }
 .left-onscorll-off-ani {
 	pointer-events: none;
-	transform: translateX(-1000px);
-	opacity: 0;
+	transform: translateX(-1000px) scale(0);
 }
 .right-onscorll-off-ani {
 	pointer-events: none;
-	transform: translateX(1000px);
-	opacity: 0;
+	transform: translateX(1000px) scale(0);
 }
 .onscorll-off-ani {
 	pointer-events: none;
-	transform: translateY(-1000px);
-	opacity: 0;
+	transform: translateY(-1000px) scale(0);
 }
 /* ****************** */
 /* *** Start Vare *** */
@@ -346,7 +342,7 @@ header nav.nav li a {
 }
 @media (max-width: 400px) {
 	header nav.nav li a {
-		margin-left: 0;
+		margin-left: 2px;
 		font-size: 0.45em;
 	}
 }
@@ -421,7 +417,7 @@ header nav.nav li a {
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.153);
 	border-radius: 10px;
 	text-align: center;
-	transition: var(--time-tra), opacity 0ms;
+	transition: var(--time-tra);
 	cursor: pointer;
 	color: white;
 }
@@ -667,6 +663,10 @@ header nav.nav li a {
 .footer::after {
 	position: absolute;
 	content: "";
+	width: 50%;
+	height: 40px;
+	background-color: inherit;
+	right: 50%;
 }
 .footer .footer-hire a {
 	color: var(--cl-accent2);
