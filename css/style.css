@@ -166,8 +166,8 @@ select {
 	transition: top var(--time-tra);
 }
 .swt-an.active {
-	border: 1px solid var(--cl-accent);
-	color: var(--cl-accent);
+	border: 1px solid var(--cl-accent2);
+	color: var(--cl-accent2);
 }
 .swt-an:hover::after {
 	top: 10px;
@@ -177,10 +177,10 @@ select {
 	z-index: 1;
 	transition: var(--time-tra);
 	font-size: var(--fn-size-400);
-	border: solid 1px var(--cl-main);
+	border: solid 1px var(--cl-accent2);
 	border-radius: 10px;
 	padding: 13px 20px;
-	color: var(--cl-main);
+	color: var(--cl-accent2);
 	font-weight: var(--fn-wei-700);
 	margin-inline: auto;
 	min-height: 50px;
@@ -197,14 +197,14 @@ select {
 	top: 0;
 	right: 100%;
 	bottom: 0;
-	background-color: var(--cl-text);
+	background-color: var(--cl-accent2);
 	transition: var(--time-tra);
 }
 .hover-button:hover::before,
 .hover-button:hover,
 .hover-button:hover::after {
 	border-color: transparent !important;
-	color: var(--cl-black) !important;
+	color: var(--cl-main) !important;
 	right: 0;
 }
 .new-section-text {
@@ -225,6 +225,11 @@ select {
 	color: var(--cl-text);
 	opacity: 0.4;
 	white-space: nowrap;
+	transition: var(--time-tra);
+}
+.new-section-text:hover::after {
+	color: var(--cl-accent2);
+	transform: scale(1.2);
 }
 .left-onscorll-off-ani {
 	pointer-events: none;
@@ -374,8 +379,7 @@ header nav.nav li a {
 	border-radius: inherit;
 }
 .hero .info {
-	max-height: 90%;
-	padding: 20px 0;
+	max-height: 80%;
 }
 .hero .info h4 {
 	font-size: var(--fn-size-400);
@@ -518,14 +522,29 @@ header nav.nav li a {
 	position: absolute;
 	width: 100%;
 	height: 130%;
-	background: linear-gradient(var(--cl-accent), var(--cl-accent2));
+	background-image: linear-gradient(
+		to right,
+		var(--cl-accent),
+		var(--cl-accent2),
+		#52c875,
+		#a8c17c
+	);
+	background-size: 300%;
 	top: -15%;
 	z-index: -1;
 	left: 0;
 	border-radius: 35% 5% 35% 5%;
-	opacity: 0.6;
+	opacity: 0.4;
+	animation: gradient calc(var(--time-tra) * 10) infinite alternate;
 }
-
+@keyframes gradient {
+	0% {
+		background-position: left;
+	}
+	100% {
+		background-position: right;
+	}
+}
 .About .content {
 	gap: 3em;
 }
@@ -641,10 +660,7 @@ header nav.nav li a {
 	height: 40px;
 	background-color: var(--cl-accent);
 }
-.Hire-me button {
-	color: var(--cl-text);
-	border: solid 1px var(--cl-text);
-}
+
 @media (max-width: 392px) {
 	.Hire-me form > div {
 		flex-direction: column;
@@ -681,26 +697,6 @@ header nav.nav li a {
 	border-right: none;
 	border-left: none;
 }
-.footer .footer-secetion {
-	position: relative;
-}
-.footer .footer-secetion::after,
-footer .footer-secetion::before {
-	content: "";
-	position: absolute;
-	width: 2px;
-	background-color: var(--cl-accent2);
-	border-radius: 20px;
-}
-.footer .footer-secetion::after {
-	top: 45px;
-	height: calc(100% - 90px);
-}
-.footer .footer-secetion::before {
-	top: 0;
-	right: -20px;
-	height: 100%;
-}
 .footer .footer-secetion li {
 	list-style: none;
 }
@@ -710,10 +706,16 @@ footer .footer-secetion::before {
 }
 .footer .footer-social svg,
 .footer .footer-social img {
-	margin-top: 1rem;
+	margin-bottom: 2rem;
 	color: var(--cl-accent2);
 	display: block;
 	width: 40px;
 	height: 40px;
+}
+.footer .footer-hire a:hover,
+.footer .footer-secetion li a:hover {
+	transition: var(--time-tra);
+	border-color: var(--cl-accent);
+	color: var(--cl-accent);
 }
 /* End footer */
