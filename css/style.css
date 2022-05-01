@@ -325,16 +325,17 @@ select {
 header {
   margin-block: 5px;
   user-select: none;
+  max-height: 65px;
 }
 header nav ul {
   padding: 0;
   animation: header-loading-animtion 600ms ease-in-out forwards;
   opacity: 0;
-  transform: scale(0);
+  transform: scale(0); 
 }
 header nav.nav li a {
   margin-left: min(40px, 4vw);
-  color: var(--cl-text);
+  color: var(--cl-black);
   cursor: pointer;
   font-size: var(--fn-size-300);
 }

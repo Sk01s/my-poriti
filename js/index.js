@@ -126,7 +126,7 @@ function createCardProject({ name, description, html_url: repoLink }) {
           target="_blank"
           class="cl-black hover-button"
           >
-          Code
+          Read code
           </a>
           <a
           href=${viewUrl}
