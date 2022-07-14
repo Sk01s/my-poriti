@@ -8,17 +8,3 @@
 .logo:hover .logo-text {
   opacity: 1;
 }
-
-.nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0%;
-  width: 0;
-  height: 1%;
-  transition: 300ms 300ms;
-  transform-origin: left;
-}
-.nav-link:hover::after {
-  width: 100%;
-}

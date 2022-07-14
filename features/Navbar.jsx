@@ -3,13 +3,13 @@ import Link from "next/link";
 import NavLink from "../components/NavLink";
 import NavStyles from "../styles/Navbar.module.css";
 import Image from "next/dist/client/image";
-import logo from "../public/logo.jpg";
+import logo from "../assens/logo.jpg";
 const Navbar = () => {
   return (
-    <header className=" flex flex-col-reverse justify-between items-stretch shadow-lg rounded-3xl px-3 absolute top-[25%] w-[75px] h-[50%] right-[0.5%] ">
+    <header className=" flex flex-col-reverse justify-between items-stretch shadow-2xl rounded-3xl px-3 fixed z-10 bg-white top-[22%] w-[82px] h-[50%] right-[0.5%] sm:top-0 sm:left-[0.5%] sm:w-[99%] sm:flex-row sm:h-20">
       <Link href="/">
         <a
-          className={`${NavStyles.logo}  relative navbar-logo bg-prime w-16 h-16 my-1 flex justify-center block items-center text-white rounded-full font-semibold duration-300 hover:opacity-80 hover:h-28`}
+          className={`${NavStyles.logo}  relative navbar-logo bg-accent w-16 h-16 my-1 flex justify-center block items-center text-white rounded-full font-semibold duration-300 hover:opacity-80 hover:h-28 sm:hover:w-32 sm:hover:h-16 `}
         >
           <Image
             src={logo}
@@ -23,7 +23,7 @@ const Navbar = () => {
           </h2>
         </a>
       </Link>
-      <nav className="flex flex-col gap-2">
+      <nav className="flex flex-col gap-2 sm:flex-row">
         <NavLink text={"contact"} href="/contact" />
         <NavLink text={"skills"} href="/skills" />
         <NavLink text={"projects"} href="/projects" />
