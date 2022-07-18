@@ -1,0 +1,18 @@
+.project:hover .link {
+  opacity: 1;
+}
+.project .link-left {
+  left: -50%;
+}
+.project .link-right {
+  right: -50%;
+}
+.project:hover .link-left {
+  left: 10px;
+}
+.project:hover .link-right {
+  right: 10px;
+}
+.link {
+  opacity: 0;
+}

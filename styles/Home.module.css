@@ -14,3 +14,10 @@
   background-attachment: fixed;
   background-image: url(../assens/bg-home.webp);
 }
+.btn:hover .cross-1 {
+  transition: 300ms;
+  transform: translate(-5px);
+}
+.btn:hover line {
+  transform: translate(-100%);
+}
