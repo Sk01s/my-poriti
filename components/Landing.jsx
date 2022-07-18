@@ -2,7 +2,7 @@ import React from "react";
 import homeStyles from "../styles/Home.module.css";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Typist from "react-text-typist";
+import Typist from "../features/text-typist";
 const Landing = () => {
   return (
     <main className={`${homeStyles.landing} w-[100vw] h-[100vh]`}>
@@ -12,7 +12,7 @@ const Landing = () => {
           Youssef Sarakibi
         </h1>
         <Typist
-          sentences={["Frontend Developer", "Software Engineer" ]}
+          sentences={["Frontend Developer", "Software Engineer"]}
           typingSpeed="100"
           className="font-bold text-3xl text-white whitespace-nowrap max-w-[300px] "
         ></Typist>

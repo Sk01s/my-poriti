@@ -20,3 +20,8 @@ a {
 *::selection {
   background-color: var(--accent);
 }
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
