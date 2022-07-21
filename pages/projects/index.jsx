@@ -19,27 +19,26 @@ const projects = ({ projects }) => {
             <motion.div
               key={project.id}
               whileHover={{ y: -10 }}
-              whileTap={{ scale: 0.9 }}
-              className={`${projectStyles.project} cursor-pointer p-12 text-center border-solid border-y-2 border-y-prime rounded-3xl `}
+              className={`${projectStyles.project} cursor-pointer p-12 text-center border-solid border-y-2 border-y-prime rounded-3xl relative `}
             >
               <h2 className="text-xl text-prime my-4">{project.name}</h2>
               <p>{project.description}</p>
-              <Link href={project.livePage}>
-                <a
-                  target="_blank"
-                  className={`${projectStyles.link} ${projectStyles["link-left"]} duration-300 p-2 mt-4 text-white bg-accent rounded-xl absolute top-1 `}
-                >
-                  view app
-                </a>
-              </Link>
-              <Link href={project.codePage}>
-                <a
-                  target="_blank"
-                  className={`${projectStyles.link} ${projectStyles["link-right"]} duration-300 p-2 mt-4 text-white bg-accent rounded-xl absolute top-1 `}
-                >
-                  view code
-                </a>
-              </Link>
+              <motion.a
+                href={project.livePage}
+                whileTap={{ scale: 0.8 }}
+                target="_blank"
+                className={`${projectStyles.link} ${projectStyles["link-left"]} duration-300 p-2 mt-4 text-white bg-accent rounded-xl absolute top-1 left-4 `}
+              >
+                view app
+              </motion.a>
+              <motion.a
+                href={project.codePage}
+                whileTap={{ scale: 0.8 }}
+                target="_blank"
+                className={`${projectStyles.link} ${projectStyles["link-right"]} duration-300 p-2 mt-4 text-white bg-accent rounded-xl absolute top-1 right-4 `}
+              >
+                view code
+              </motion.a>
             </motion.div>
           );
         })}

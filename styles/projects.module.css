@@ -1,18 +1,22 @@
-.project:hover .link {
-  opacity: 1;
+.project::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-radius: inherit;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  background-image: linear-gradient(69deg, var(--accent), var(--prime));
+  transition: 300ms;
 }
-.project .link-left {
-  left: -50%;
-}
-.project .link-right {
-  right: -50%;
-}
-.project:hover .link-left {
-  left: 10px;
-}
-.project:hover .link-right {
-  right: 10px;
+.project:hover::after {
+  opacity: 0.2;
 }
 .link {
   opacity: 0;
+}
+.project:hover .link {
+  opacity: 1;
 }

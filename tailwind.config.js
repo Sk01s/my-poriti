@@ -10,9 +10,9 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      prime: "#6868f7",
+      prime: "var(--prime)",
       white: "#ffffff",
-      accent: "#f47d83",
+      accent: "var(--accent)",
       paragraph: "#b8b8eb",
     },
     screens: {
