@@ -13,7 +13,8 @@ module.exports = {
       prime: "var(--prime)",
       white: "#ffffff",
       accent: "var(--accent)",
-      paragraph: "#b8b8eb",
+      paragraph: "var(--paragaph)",
+      black: "var(--black)",
     },
     screens: {
       "2xl": { max: "1535px" },

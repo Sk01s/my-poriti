@@ -4,14 +4,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Mali:wght@200;300;400;500;600;700&display=swap");
 :root {
   --prime: #6868f7;
-  --accent:#f47d83;
+  --accent: #68F7DB;
+  --black: #242222;
+  --paragaph: #242928;
 }
 html,
 body {
-  --accent: #f47d83;
   padding: 0;
   margin: 0;
   font-family: "Mali", cursive;
+  background-color: var(--black);
 }
 a {
   color: inherit;
