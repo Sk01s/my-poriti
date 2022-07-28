@@ -6,7 +6,7 @@ const NavLink = ({ href, text }) => {
   return (
     <Link href={href}>
       <a
-        className={`${NavStyles["nav-link"]} text-sm flex justify-center items-center p-4 my-1 capitalize  relative text-accent  font-medium duration-300 rounded-3xl after:bg-white hover:bg-gradient-to-tr from-accent to-prime hover:text-black hover:opacity-60 `}
+        className={`${NavStyles["nav-link"]} text-sm flex justify-center items-center  px-4 py-6 capitalize relative text-accent font-medium duration-300 rounded-3xl after:bg-white hover:bg-gradient-to-tr from-accent to-prime hover:text-black hover:opacity-60 `}
       >
         {text}
       </a>
