@@ -21,7 +21,7 @@ const Contact = () => {
                 setRespond(
                   "Thank for your message, will respond as soon as possible"
                 );
-                e.target.emai.value = "";
+                e.target.email.value = "";
                 e.target.name.value = "";
                 e.target.message.value = "";
                 e.target.emai.value = "";
