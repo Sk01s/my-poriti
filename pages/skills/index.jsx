@@ -6,7 +6,7 @@ const Skills = () => {
       initial={{ y: -1000 }}
       animate={{ y: 0 }}
       transition={{ duration: 1 }}
-      className="px-10 h-[100vh] flex flex-col gap-10 justify-center items-center"
+      className="px-10 sm:translate-y-20 h-[100vh] flex flex-col gap-10 justify-center items-center"
     >
       <h1 className="text-accent text-3xl">Skills</h1>
 
