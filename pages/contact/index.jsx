@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 const Contact = () => {
   const [respond, setRespond] = useState("");
   return (
-    <div className="px-10 sm:translate-y-20 h-[100vh] flex flex-col gap-10 justify-center items-center">
+    <motion.main
+      initial={{ y: -1000 }}
+      animate={{ y: -16 }}
+      className="px-10 sm:translate-y-20 h-[100vh] flex flex-col gap-10 justify-center items-center"
+    >
       <form
         className=" flex flex-col gap-6 justify-center  bg-paragraph p-12 rounded-3xl text-prime "
         onSubmit={(e) => {
@@ -59,12 +64,12 @@ const Contact = () => {
           id="message"
           name="message"
         />
-        <button className=" rounded-xl hover:bg-gradient-to-tr from-accent to-prime hover:text-black border-2 max-w-[50%] duration-300 ">
+        <button className=" rounded-xl hover:bg-gradient-to-tr px-6 py-2 mx-auto from-accent to-prime hover:text-black border-2 max-w-[60%] duration-300 ">
           submit
         </button>
-        <div className="text-prime">{respond}</div>
+        <div className="text-prime bg-accent">{respond}</div>
       </form>
-    </div>
+    </motion.main>
   );
 };
 

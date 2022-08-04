@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps, router }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <AnimatePresence initial={false} exitBeforeEnter>
+      <AnimatePresence exitBeforeEnter>
         <motion.div key={router.route} exit={{ y: -1000 }}>
           <Component {...pageProps} />
         </motion.div>

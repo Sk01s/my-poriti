@@ -4,6 +4,7 @@ import NavLink from "../components/NavLink";
 import NavStyles from "../styles/Navbar.module.css";
 import Image from "next/dist/client/image";
 import logo from "../assets/logo.jpg";
+import { motion } from "framer-motion";
 const Navbar = () => {
   return (
     <header className="flex flex-col-reverse justify-between items-stretch shadow-2xl rounded-3xl px-3 fixed z-10 bg-black top-[13%] w-[87px] h-[56%] right-[0.2%] sm:top-2 sm:left-[0.5%] sm:w-[99%] sm:flex-row sm:h-20 select-none">
@@ -29,13 +30,22 @@ const Navbar = () => {
         <NavLink text={"contact"} href="/contact" />
         <NavLink text={"skills"} href="/skills" />
         <NavLink text={"projects"} href="/projects" />
-        <a
+        <motion.a
           href="/Youssef-Resume.pdf"
           download
-          className={`${NavStyles["nav-link"]} text-sm flex justify-center items-center  px-4 py-6 capitalize relative text-accent font-medium duration-300 rounded-3xl after:bg-white hover:bg-gradient-to-tr from-accent to-prime hover:text-black hover:opacity-60 `}
+          className=" text-sm flex justify-center items-center px-4 py-6 capitalize  rounded-3xl cursor-pointer"
+          animate={{
+            color: "var(--accent)",
+          }}
+          whileHover={{
+            backgroundColor: "var(--accent)",
+            color: "var(--black)",
+            y: -5,
+            boxShadow: "0 -5px 0 0 var(--black)",
+          }}
         >
           Resume
-        </a>
+        </motion.a>
       </nav>
     </header>
   );

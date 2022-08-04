@@ -1,15 +1,24 @@
 import React from "react";
-import NavStyles from "../styles/Navbar.module.css";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 const NavLink = ({ href, text }) => {
   return (
     <Link href={href}>
-      <a
-        className={`${NavStyles["nav-link"]} text-sm flex justify-center items-center  px-4 py-6 capitalize relative text-accent font-medium duration-300 rounded-3xl after:bg-white hover:bg-gradient-to-tr from-accent to-prime hover:text-black hover:opacity-60 `}
+      <motion.a
+        className=" text-sm flex justify-center items-center px-4 py-6 capitalize  rounded-3xl cursor-pointer"
+        animate={{
+          color: "var(--accent)",
+        }}
+        whileHover={{
+          backgroundColor: "var(--accent)",
+          color: "var(--black)",
+          y: -5,
+          boxShadow: "0 -5px 0 0 var(--black)",
+        }}
       >
         {text}
-      </a>
+      </motion.a>
     </Link>
   );
 };
