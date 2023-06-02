@@ -13,7 +13,6 @@ const Contact = () => {
         className=" flex flex-col gap-6 justify-center  bg-paragraph p-12 rounded-3xl text-prime "
         onSubmit={(e) => {
           e.preventDefault();
-          console.log(e.target);
           emailjs
             .sendForm(
               "service_sprvwi7",
@@ -23,13 +22,13 @@ const Contact = () => {
             )
             .then(
               (result) => {
+                console.log(e);
                 setRespond(
                   "Thank for your message, will respond as soon as possible"
                 );
                 e.target.email.value = "";
                 e.target.name.value = "";
                 e.target.message.value = "";
-                e.target.emai.value = "";
               },
               (error) => {
                 setRespond(error.message);
