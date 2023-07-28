@@ -8,21 +8,21 @@ const Landing = () => {
     <main className={`${homeStyles.landing} w-[100vw] h-[100vh]`}>
       <div className=" absolute z-10 top-[35%] max-w-[70%] left-[50%] sm:left-[45%] translate-x-[-55%] translate-y-[-50%] ">
         <h3 className="text-accent font-thin mb-2">My name is</h3>
-        <h1 className="text-black text-4xl font-bold mb-3 whitespace-nowrap">
+        <h1 className="text-black text-4xl font-bold mb-3 whitespace-nowrap max-w-[90vw] sm:text-2xl">
           Youssef Sarakibi
         </h1>
         <Typist
           sentences={["Frontend Developer", "Software Engineer"]}
           typingSpeed="100"
-          className="font-thin text-3xl text-black whitespace-nowrap max-w-[300px] "
+          className="font-thin text-3xl text-black whitespace-nowrap w-[300px] max-w-[90vw] "
         ></Typist>
-        <p className="text-paragraph text-sm opacity-80 my-5  w-[300px]">
+        <p className="text-paragraph text-sm opacity-80 my-5  w-[300px] max-w-[90vw]">
           I love to build an incredible and appealing web application with the
           newest Technology
         </p>
         <Link href="/contact">
           <motion.a
-            className={`${homeStyles.btn} text-black  bg-accent px-6 pr-10 py-2 rounded-xl relative cursor-pointer`}
+            className={`${homeStyles.btn} text-black  bg-accent pl-6 pr-10 py-2 rounded-xl relative cursor-pointer whitespace-nowrap max-w-[100vw] sm:px-8 sm:text-sm`}
             whileHover={{
               boxShadow: "4px 8px 2px rgba(255,255,255,0.3)",
             }}

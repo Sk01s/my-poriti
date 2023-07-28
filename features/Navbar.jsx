@@ -7,7 +7,7 @@ import logo from "../assets/logo.jpg";
 import { motion } from "framer-motion";
 const Navbar = () => {
   return (
-    <header className="flex flex-col-reverse justify-between items-stretch shadow-2xl rounded-3xl px-3 fixed z-10 bg-black top-[13%] w-[87px] h-[56%] right-[0.2%] sm:top-2 sm:left-[0.5%] sm:w-[99%] sm:flex-row sm:h-20 select-none">
+    <header className="flex flex-col-reverse justify-between items-stretch shadow-2xl rounded-3xl px-3 fixed z-10 bg-black top-[13%] w-[87px] h-[56%] right-[0.2%] sm:top-2 sm:left-[0.5%] sm:w-[90%] sm:flex-row sm:h-20 select-none">
       <Link href="/">
         <a
           className={`${NavStyles.logo}  relative navbar-logo bg-accent w-16 h-16 my-1 flex justify-center block items-center text-white rounded-full font-semibold duration-300 hover:opacity-80 hover:h-28 sm:flex-col sm:hover:w-32 sm:hover:h-16 `}
@@ -26,22 +26,20 @@ const Navbar = () => {
           </h2>
         </a>
       </Link>
-      <nav className="flex flex-col gap-2 sm:flex-row">
+      <nav className="flex flex-col gap-2 py-1 sm:flex-row">
         <NavLink text={"contact"} href="/contact" />
         <NavLink text={"skills"} href="/skills" />
         <NavLink text={"projects"} href="/projects" />
         <motion.a
           href="/Youssef-Resume.pdf"
           download
-          className=" text-sm flex justify-center items-center px-4 py-6 capitalize  rounded-3xl cursor-pointer"
+          className=" text-sm flex justify-center items-center px-4 py-6 capitalize  rounded-3xl cursor-pointer sm:px-0 sm:py-1"
           animate={{
             color: "var(--accent)",
           }}
           whileHover={{
             backgroundColor: "var(--accent)",
             color: "var(--black)",
-            y: -5,
-            boxShadow: "0 -5px 0 0 var(--black)",
           }}
         >
           Resume

@@ -6,15 +6,13 @@ const NavLink = ({ href, text }) => {
   return (
     <Link href={href}>
       <motion.a
-        className=" text-sm flex justify-center items-center px-4 py-6 capitalize  rounded-3xl cursor-pointer"
+        className=" text-sm flex justify-center items-center px-4 py-2 capitalize  rounded-3xl cursor-pointer sm:px-0 sm:py-2"
         animate={{
           color: "var(--accent)",
         }}
         whileHover={{
           backgroundColor: "var(--accent)",
           color: "var(--black)",
-          y: -5,
-          boxShadow: "0 -5px 0 0 var(--black)",
         }}
       >
         {text}
