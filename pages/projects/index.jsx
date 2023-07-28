@@ -13,12 +13,17 @@ const Projects = ({ projects }) => {
         {projects.map(
           ({ fork, name, id, livePage, codePage, description, languages }) => {
             if (fork) return;
-            if (name === "youssef portifolio" || name === "Sk01s") return;
+            if (
+              name === "youssef portifolio" ||
+              name === "Sk01s" ||
+              name === "Rebar backend"
+            )
+              return;
             return (
               <motion.div
                 key={id}
-                whileHover={{ y: -10 }}
-                className={`${projectStyles.project} cursor-pointer p-12 text-center border-solid border-y-2 border-t-prime border-b-accent rounded-xl relative `}
+                whileHover={{ y: -2 }}
+                className={`${projectStyles.project} cursor-pointer p-12 text-center border-solid border-y-2 border-t-prime border-b-accent rounded-xl relative max-w-[90vw]`}
               >
                 <h2 className="text-xl font-bold text-prime my-4">{name}</h2>
                 <p className=" text-[#CBD5E1]">{description}</p>
@@ -58,7 +63,7 @@ const origizeProjects = (projects) => {
     };
   });
 };
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   try {
     const projectsData = await fetch(
       "https://api.github.com/users/Sk01s/repos",
