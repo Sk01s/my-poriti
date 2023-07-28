@@ -7,20 +7,20 @@ import logo from "../assets/logo.jpg";
 import { motion } from "framer-motion";
 const Navbar = () => {
   return (
-    <header className="flex flex-col-reverse justify-between items-stretch shadow-2xl rounded-3xl px-3 fixed z-10 bg-black top-[13%] w-[87px] h-[56%] right-[0.2%] sm:top-2 sm:left-[0.5%] sm:w-[90%] sm:flex-row sm:h-20 select-none">
+    <header className="flex flex-col-reverse justify-between items-stretch shadow-2xl rounded-3xl px-3 fixed z-10 bg-black top-[13%] w-[87px] h-[70%] right-[0.2%] sm:top-2 sm:left-[0.5%] sm:w-[90%] sm:flex-row sm:h-20 select-none">
       <Link href="/">
         <a
-          className={`${NavStyles.logo}  relative navbar-logo bg-accent w-16 h-16 my-1 flex justify-center block items-center text-white rounded-full font-semibold duration-300 hover:opacity-80 hover:h-28 sm:flex-col sm:hover:w-32 sm:hover:h-16 `}
+          className={`${NavStyles.logo}  relative navbar-logo bg-accent w-16 h-16 my-1 flex justify-center  items-center text-white rounded-full font-semibold duration-300 hover:opacity-80 hover:h-28 sm:flex-col sm:hover:w-32 sm:hover:h-16 `}
         >
           <Image
             src={logo}
             className={`${NavStyles["logo-image"]} sm:opacity-0 rounded-full duration-300`}
-            alt=""
+            alt="logo"
             width={100}
             height={100}
           />
           <h2
-            className={`${NavStyles["logo-text"]} text-black font-thin text-sm sm:opacity-100 absolute duration-300`}
+            className={`${NavStyles["logo-text"]} text-black font-thin text-sm sm:opacity-100 absolute duration-300 sm:text-[1rem]`}
           >
             Youssef
           </h2>
@@ -33,7 +33,7 @@ const Navbar = () => {
         <motion.a
           href="/Youssef-Resume.pdf"
           download
-          className=" text-sm flex justify-center items-center px-4 py-6 capitalize  rounded-3xl cursor-pointer sm:px-0 sm:py-1"
+          className=" text-sm flex justify-center items-center px-4 py-6 capitalize  rounded-3xl cursor-pointer sm:px-0 sm:py-1 sm:text-[10px]"
           animate={{
             color: "var(--accent)",
           }}

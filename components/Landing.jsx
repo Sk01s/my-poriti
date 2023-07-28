@@ -14,7 +14,7 @@ const Landing = () => {
         <Typist
           sentences={["Frontend Developer", "Software Engineer"]}
           typingSpeed="100"
-          className="font-thin text-3xl text-black whitespace-nowrap w-[300px] max-w-[90vw] "
+          className="font-thin text-3xl text-black whitespace-nowrap w-[300px] sm:text-2xl "
         ></Typist>
         <p className="text-paragraph text-sm opacity-80 my-5  w-[300px] max-w-[90vw]">
           I love to build an incredible and appealing web application with the
