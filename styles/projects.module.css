@@ -1,23 +1,2 @@
-.project::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  border-radius: inherit;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  background-image: linear-gradient(69deg, var(--accent), var(--prime));
-  transition: 300ms;
-}
-.project:hover::after {
-  opacity: 0.2;
-}
-.link {
-  opacity: 0;
-}
-.project:hover .link {
-  opacity: 1;
-  z-index: 1;
-}
+
+

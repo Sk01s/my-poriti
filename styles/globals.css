@@ -33,3 +33,7 @@ a {
     opacity: 1;
   }
 }
+
+.box-shadow {
+  box-shadow: #ffffff1d 0 0 14px 2px;
+}

@@ -22,7 +22,6 @@ const Contact = () => {
             )
             .then(
               (result) => {
-                console.log(e);
                 setRespond(
                   "Thank for your message, will respond as soon as possible"
                 );
@@ -46,7 +45,7 @@ const Contact = () => {
           className="rounded-2xl font-semibold p-1"
         />
         <label htmlFor="text" className="text-xl font-semibold">
-          name
+          Name
         </label>
         <input
           type="text"
@@ -55,7 +54,7 @@ const Contact = () => {
           className="rounded-2xl font-semibold p-1"
         />
         <label htmlFor="message" className="text-xl font-semibold">
-          messege
+          Messege
         </label>
         <textarea
           className="rounded-xl "
@@ -64,9 +63,9 @@ const Contact = () => {
           name="message"
         />
         <button className=" rounded-xl hover:bg-gradient-to-tr px-6 py-2 mx-auto from-accent to-prime hover:text-black border-2 max-w-[60%] duration-300 ">
-          submit
+          Submit
         </button>
-        <div className="text-prime bg-accent">{respond}</div>
+        <div className="text-white bg-black rounded-xl p-3">{respond}</div>
       </form>
     </motion.main>
   );
