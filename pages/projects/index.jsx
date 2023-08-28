@@ -62,7 +62,7 @@ const Projects = () => {
             return (
               <motion.div
                 key={heights[index]}
-                className={`sm:w-full w-[90%] flex md:flex-col sm:flex-col   gap-12 px-2 py-5 rounded-3xl relative bg-[#35273a4a] ${
+                className={`sm:w-full w-[90%] flex md:flex-col sm:flex-col   gap-12 px-2 py-5 rounded-3xl relative bg-[#35273a4a]  shadow-md ${
                   index % 2 === 0 ? "flex-row-reverse" : "flex-row "
                 } `}
               >

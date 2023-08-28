@@ -65,7 +65,9 @@ const Contact = () => {
         <button className=" rounded-xl hover:bg-gradient-to-tr px-6 py-2 mx-auto from-accent to-prime hover:text-black border-2 max-w-[60%] duration-300 ">
           Submit
         </button>
-        <div className="text-white bg-black rounded-xl p-3">{respond}</div>
+        {respond && (
+          <div className="text-white bg-black rounded-xl p-3">{respond}</div>
+        )}
       </form>
     </motion.main>
   );

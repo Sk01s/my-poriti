@@ -23,6 +23,9 @@ module.exports = {
       md: { max: "767px" },
       sm: { max: "639px" },
     },
+    boxShadow: {
+      md: "rgba(0, 0, 0, 0.25) 2px 6px 16px 8px",
+    },
     extend: {},
   },
   plugins: [],
