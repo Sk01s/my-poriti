@@ -12,18 +12,12 @@ const Navbar = () => {
         <a
           className={`${NavStyles.logo}  relative navbar-logo bg-accent w-16 h-12 my-1 flex justify-center  items-center text-white rounded-full font-semibold duration-300 hover:opacity-80 hover:h-28 sm:flex-col sm:hover:w-32 sm:hover:h-12 `}
         >
-          <Image
-            src={logo}
-            className={`${NavStyles["logo-image"]} sm:opacity-0 rounded-full duration-300`}
-            alt="logo"
-            width={100}
-            height={100}
-          />
-          <h2
-            className={`${NavStyles["logo-text"]} text-black font-thin text-sm sm:opacity-100 absolute duration-300 sm:text-[1rem]`}
+
+          <div
+            className={`${NavStyles["logo-text"]} text-black font-thin text-sm opacity-100 absolute duration-300 sm:text-[1rem]`}
           >
-            Youssef
-          </h2>
+            Home
+          </div>
         </a>
       </Link>
       <nav className="flex flex-col gap-2 py-1 sm:flex-row">
@@ -31,7 +25,7 @@ const Navbar = () => {
         <NavLink text={"skills"} href="/skills" />
         <NavLink text={"projects"} href="/projects" />
         <motion.a
-          href="/Youssef-Resume.pdf"
+          href="/Youssef Sarakbi CV.pdf"
           download
           className=" text-sm flex justify-center items-center px-4 py-6 capitalize  rounded-3xl cursor-pointer sm:px-0 sm:py-1 sm:text-[10px]"
           animate={{
